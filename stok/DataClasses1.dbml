@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="STOK" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-KSLE4AO\SQLEXPRESS;Initial Catalog=STOK;Integrated Security=True" SettingsObjectName="stok.Properties.Settings" SettingsPropertyName="STOKConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Stok_TelMarka" Member="Stok_TelMarka">
+    <Type Name="Stok_TelMarka">
+      <Column Name="Stok_MarkaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stok_MarkaAdi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_KayıtYapan" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Stok_TelMarka_Stok_TelModel" Member="Stok_TelModel" ThisKey="Stok_MarkaID" OtherKey="Stok_TelMarkaID" Type="Stok_TelModel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stok_TelModel" Member="Stok_TelModel">
+    <Type Name="Stok_TelModel">
+      <Column Name="Stok_ModelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stok_ModelAdı" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_ModelYear" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_KayıtYapan" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_TelMarkaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stok_TelModel_Stok_TelParca" Member="Stok_TelParca" ThisKey="Stok_ModelID" OtherKey="Stok_ModelID" Type="Stok_TelParca" />
+      <Association Name="Stok_TelMarka_Stok_TelModel" Member="Stok_TelMarka" ThisKey="Stok_TelMarkaID" OtherKey="Stok_MarkaID" Type="Stok_TelMarka" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stok_TelParca" Member="Stok_TelParca">
+    <Type Name="Stok_TelParca">
+      <Column Name="Stok_ParcaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stok_ParcaAdi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_ParcaAdet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stok_KayıtYapan" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Stok_ModelID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stok_TelModel_Stok_TelParca" Member="Stok_TelModel" ThisKey="Stok_ModelID" OtherKey="Stok_ModelID" Type="Stok_TelModel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stok_PcMarka" Member="Stok_PcMarka">
+    <Type Name="Stok_PcMarka">
+      <Column Name="PcID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PcMarkaAdi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PcMarkaKayıtEden" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Stok_PcMarka_Stok_PcModel" Member="Stok_PcModel" ThisKey="PcID" OtherKey="PcModelMarkaID" Type="Stok_PcModel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stok_PcModel" Member="Stok_PcModel">
+    <Type Name="Stok_PcModel">
+      <Column Name="PcModelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PcModelAdi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PcModelYear" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PcModelKayıtEden" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PcModelMarkaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stok_PcModel_Stok_PcParca" Member="Stok_PcParca" ThisKey="PcModelID" OtherKey="ParcaModelID" Type="Stok_PcParca" />
+      <Association Name="Stok_PcMarka_Stok_PcModel" Member="Stok_PcMarka" ThisKey="PcModelMarkaID" OtherKey="PcID" Type="Stok_PcMarka" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stok_PcParca" Member="Stok_PcParca">
+    <Type Name="Stok_PcParca">
+      <Column Name="ParcaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParcaAdi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ParcaAdet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParcaKayıtEden" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ParcaModelID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stok_PcModel_Stok_PcParca" Member="Stok_PcModel" ThisKey="ParcaModelID" OtherKey="PcModelID" Type="Stok_PcModel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

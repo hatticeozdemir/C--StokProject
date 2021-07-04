@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="72d005d0-b96c-4bb5-925d-58ae3288018a" absoluteBounds="6.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_TelMarka" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd23866a-8ed4-4fa6-81d3-7e8a05bc087b" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11a709e4-a952-4a75-b59e-7b0a24c4becc" absoluteBounds="6.875, 2.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_TelModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f883824d-983c-48f4-bba3-f00237bf78f8" absoluteBounds="6.89, 2.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.8125 : 2.1362939453125); (7.8125 : 2.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Stok_TelMarka/Stok_TelMarka_Stok_TelModel" />
+      <nodes>
+        <classShapeMoniker Id="72d005d0-b96c-4bb5-925d-58ae3288018a" />
+        <classShapeMoniker Id="11a709e4-a952-4a75-b59e-7b0a24c4becc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="398ceb4b-ed19-4b3a-b8b1-1632c6da232e" absoluteBounds="6.75, 4.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_TelParca" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6a5667b-4536-4d78-9092-4b52d74368dd" absoluteBounds="6.765, 5.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.8125 : 4.14589680989583); (7.8125 : 4.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Stok_TelModel/Stok_TelModel_Stok_TelParca" />
+      <nodes>
+        <classShapeMoniker Id="11a709e4-a952-4a75-b59e-7b0a24c4becc" />
+        <classShapeMoniker Id="398ceb4b-ed19-4b3a-b8b1-1632c6da232e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="2108dd4f-1e48-4f3a-a84d-e4893d73b998" absoluteBounds="2.75, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_PcMarka" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3bceb6b-ee5e-48d5-9f27-2456c419ad40" absoluteBounds="2.765, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a7a0bc9-4df6-4d27-b213-45afe17d689c" absoluteBounds="2.875, 2.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_PcModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="381fe66b-ddb8-4a1d-9da6-7a14f6c09b47" absoluteBounds="2.89, 2.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.8125 : 2.0112939453125); (3.8125 : 2.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Stok_PcMarka/Stok_PcMarka_Stok_PcModel" />
+      <nodes>
+        <classShapeMoniker Id="2108dd4f-1e48-4f3a-a84d-e4893d73b998" />
+        <classShapeMoniker Id="1a7a0bc9-4df6-4d27-b213-45afe17d689c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f28043f1-6224-4934-a226-e360c3b55fb4" absoluteBounds="3.125, 4.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Stok_PcParca" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d26b9002-8d64-4128-a0da-86fe802a9c07" absoluteBounds="3.14, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 4.14589680989583); (4 : 4.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Stok_PcModel/Stok_PcModel_Stok_PcParca" />
+      <nodes>
+        <classShapeMoniker Id="1a7a0bc9-4df6-4d27-b213-45afe17d689c" />
+        <classShapeMoniker Id="f28043f1-6224-4934-a226-e360c3b55fb4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
